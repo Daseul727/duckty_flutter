@@ -11,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final PageController _controller = PageController();
   final PageController _controller2 = PageController(); // 두 번째 슬라이드를 위한 컨트롤러
+  final PageController _controller3 = PageController(); // 두 번째 슬라이드를 위한 컨트롤러
 
   @override
   Widget build(BuildContext context) {
@@ -66,8 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 effect: ExpandingDotsEffect(
                   dotWidth: 10.0,
                   dotHeight: 10.0,
-                  activeDotColor: Colors.grey, // 활성화된 점의 색
-                  dotColor: Colors.grey, // 비활성화된 점의 색
+                  activeDotColor: Colors.orange, // 활성화된 점의 색
+                  dotColor: Colors.amberAccent, // 비활성화된 점의 색
                 ),
               ),
             ),
@@ -118,8 +119,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 effect: ExpandingDotsEffect(
                   dotWidth: 10.0,
                   dotHeight: 10.0,
-                  activeDotColor: Colors.grey, // 활성화된 점의 색
-                  dotColor: Colors.grey, // 비활성화된 점의 색
+                  activeDotColor: Colors.orange, // 활성화된 점의 색
+                  dotColor: Colors.amberAccent, // 비활성화된 점의 색
                 ),
               ),
             ),
@@ -143,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               height: 200, // 두 번째 슬라이드 높이 설정
               child: PageView(
-                controller: _controller2, // 두 번째 PageController
+                controller: _controller3, // 두 번째 PageController
                 children: [
                   Container(
                     color: Colors.purple,
@@ -165,13 +166,13 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: SmoothPageIndicator(
-                controller: _controller2, // 두 번째 슬라이드의 PageController
+                controller: _controller3, // 두 번째 슬라이드의 PageController
                 count: 3, // 두 번째 슬라이드 개수
                 effect: ExpandingDotsEffect(
                   dotWidth: 10.0,
                   dotHeight: 10.0,
-                  activeDotColor: Colors.grey, // 활성화된 점의 색
-                  dotColor: Colors.grey, // 비활성화된 점의 색
+                  activeDotColor: Colors.orange, // 활성화된 점의 색
+                  dotColor: Colors.amberAccent, // 비활성화된 점의 색
                 ),
               ),
             ),
